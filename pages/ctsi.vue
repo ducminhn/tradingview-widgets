@@ -2,23 +2,9 @@
   <div>
 		<!-- TradingView Widget BEGIN -->
 		<div class="tradingview-widget-container">
-			<div class="tradingview-widget-container__widget"></div>
+			<div id="tradingview_3b098"></div>
+			<script type="text/javascript">
 			
-			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-			{
-			"symbol": "BINANCE:CTSIUSDT",
-			"width": 350,
-			"height": 220,
-			"locale": "en",
-			"dateRange": "12M",
-			"colorTheme": "dark",
-			"trendLineColor": "rgba(41, 98, 255, 1)",
-			"underLineColor": "rgba(41, 98, 255, 0.3)",
-			"underLineBottomColor": "rgba(41, 98, 255, 0)",
-			"isTransparent": false,
-			"autosize": false,
-			"largeChartUrl": ""
-		}
 			</script>
 		</div>
 		<!-- TradingView Widget END -->
@@ -26,5 +12,40 @@
 </template>
 
 <script>
-export default {}
+export default {
+	mounted() {
+		new TradingView.MediumWidget({
+			"symbols": [
+				[
+					"Cartesi",
+					"BINANCE:CTSIUSDT|12M"
+				],
+				[
+					"Bitcoin",
+					"BINANCE:BTCUSDT|12M"
+				]
+			],
+			"chartOnly": false,
+			"width": "800",
+			"height": "400",
+			"locale": "en",
+			"colorTheme": "dark",
+			"gridLineColor": "rgba(42 ,46, 57, 0)",
+			"fontColor": "#787B86",
+			"isTransparent": false,
+			"autosize": true,
+			"showFloatingTooltip": true,
+			"showVolume": false,
+			"scalePosition": "no",
+			"scaleMode": "Normal",
+			"fontFamily": "Trebuchet MS, sans-serif",
+			"noTimeScale": false,
+			"chartType": "area",
+			"lineColor": "#2962FF",
+			"bottomColor": "rgba(41, 98, 255, 0)",
+			"topColor": "rgba(41, 98, 255, 0.3)",
+			"container_id": "tradingview_3b098"
+		});
+	},
+}
 </script>
