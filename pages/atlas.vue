@@ -17,7 +17,7 @@ export default {
 		new TradingView.MediumWidget({
 			"symbols": [
 				[
-					"Cartesi",
+					"Atlas",
 					"FTX:ATLASUSD|12M"
 				],
 				[

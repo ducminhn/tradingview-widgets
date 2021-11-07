@@ -17,7 +17,7 @@ export default {
 		new TradingView.MediumWidget({
 			"symbols": [
 				[
-					"Cartesi",
+					"Badger",
 					"BINANCE:BADGERUSDT|12M"
 				],
 				[
